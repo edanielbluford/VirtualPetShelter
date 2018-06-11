@@ -36,5 +36,23 @@ namespace VirtualPetShelterProject
         {
             throw new NotImplementedException();
         }
+
+        public void FeedPets(VirtualPetShelter name)
+        {
+
+            foreach (var item in name.PetRoster)
+            {
+                item.Feed();
+            }
+
+        }
+
+        public void Water(VirtualPetShelter name)
+        {
+            foreach (var item in name.PetRoster)
+            {
+                item.Water();
+            }
+        }
     }
 }

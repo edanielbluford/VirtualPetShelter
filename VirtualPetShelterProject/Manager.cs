@@ -28,10 +28,10 @@ namespace VirtualPetShelterProject
             this.EmployeeStartDate = employeeStartDate;
         }
 
-       public void Adopt()
-        {
-
-        }
+       //public void Adopt(VirtualPetShelter name)
+       // {
+       //     name.PetRoster.Remove(MagicalBeast);
+       // }  Pete I had some trouble with this one.
 
         public override void ManageMischeif()
         {

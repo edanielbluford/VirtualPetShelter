@@ -18,10 +18,10 @@ namespace VirtualPetShelterProject
 
             bool gameOn = true;
             string[] employeeArray = new string[] { "1. Shelter Manager", "2. Shelter Volunteer" };
-            string[] managerChoiceArray = new string[] { "1. Feed", "2. Give Water", "3.Play", "4. Adopt", "5. Take to doctor", "6. Lay down for a Nap", "7. Exit" };
-            
+            string[] managerChoiceArray = new string[] { "1. Play", "2. Adopt", "3. Take to doctor", "4. Lay down for a Nap", "5. Exit" };
+            string[] volunteerChoiceArray = new string[] { "1. Feed", "2. Give Water", "3.Play", "4. Take to doctor", "5. Lay down for a Nap", "6. Exit" };
 
-            while(gameOn == true)
+            while (gameOn == true)
             {
 
                 int employeeValue = 0;
@@ -61,26 +61,17 @@ namespace VirtualPetShelterProject
                             int managerChoice = int.Parse(Console.ReadLine());
                             switch (managerChoice)
                             {
+                                
                                 case 1:
-                                    karen.FeedPets(grovewood);
-                                    foreach (var item in grovewood.PetRoster)
-                                    {
-                                        Console.WriteLine("You fed {0} their favorite meal! {1}!", item.Name, item.Diet);
-                                    }
-                                    break;
-                                case 2:
-                                    karen.Water(grovewood);
-                                    break;
-                                case 3:
                                     karen.Play(grovewood);
                                     break;
-                                case 4: karen.Adopt();
+                                case 2: /*karen.Adopt();*/ //had some issues with this one
                                     break;
-                                case 5: karen.DoctorVisit(grovewood);
+                                case 3: karen.DoctorVisit(grovewood);
                                     break;
-                                case 6:karen.Sleep(grovewood);
+                                case 4:karen.Sleep(grovewood);
                                     break;
-                                case 7: managerMode = false;
+                                case 5: managerMode = false;
                                     break;
                                 default:
                                     Console.WriteLine("I'm sorry, you entered an unknown choice, please try again.");
@@ -108,7 +99,7 @@ namespace VirtualPetShelterProject
                             }
 
                             Console.WriteLine("What would you like to do today?");
-                            for (int i = 0; i < managerChoiceArray.Length; i++)
+                            for (int i = 0; i < volunteerChoiceArray.Length; i++)
                             {
                                 Console.WriteLine(managerChoiceArray[i]);
                             }
@@ -128,17 +119,15 @@ namespace VirtualPetShelterProject
                                 case 3:
                                     joseph.Play(grovewood);
                                     break;
+                                
                                 case 4:
-                                    karen.Adopt();
-                                    break;
-                                case 5:
                                     joseph.DoctorVisit(grovewood);
                                     break;
-                                case 6:
+                                case 5:
                                     joseph.Sleep(grovewood);
                                     break;
-                                case 7:
-                                    managerMode = false;
+                                case 6:
+                                    volunteerMode = false;
                                     break;
                                 default:
                                     Console.WriteLine("I'm sorry, you entered an unknown choice, please try again.");

@@ -26,23 +26,7 @@ namespace VirtualPetShelterProject
             this.EmployeeStartDate = employeeStartDate;
         }
 
-        public void FeedPets(VirtualPetShelter name )
-        {
-
-            foreach (var item in name.PetRoster)
-            {
-                item.Feed();
-            }
-
-        }
-
-        public void Water(VirtualPetShelter name )
-        {
-            foreach (var item in name.PetRoster)
-            {
-                item.Water();
-            }
-        }
+       
         public void Play(VirtualPetShelter name)
         {
             foreach (var item in name.PetRoster)

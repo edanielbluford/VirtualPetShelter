@@ -21,6 +21,8 @@ namespace VirtualPetShelterProject
         new Volunteer("Joseph",200,"Volunteer","08/17/2017",20,"Volunteer Inc"),
         new Manager("2/10/2010", "Volunteer", "Karen", 0020, "Manager", "02/06/2008")};
 
+        
+
         public List<Employee> Employees { get => employees; set => employees = value; }
         public List<MagicalBeast> PetRoster { get => petRoster; set => petRoster = value; }
 
