@@ -8,20 +8,38 @@ namespace VirtualPetShelterProject
 {
     class VirtualPetShelter
     {
-        public List<Employee> EmployeeRoster { get; set; }
-        public List<VirtualPet> PetRoster { get; set; }
+
+        
+       
+        private List<MagicalBeast> petRoster = new List<MagicalBeast>() {
+         new MagicalBeast("Thomas", "Griffin",0,0,40, "Snakes", 0, 40, 0, 40, 40, 0, 50, 0, 0)
+        ,new MagicalBeast("Maxim", "Sphinx",0,0,40, "Riddles", 0, 40, 0, 40, 40, 0, 50, 0, 0),
+        new MagicalBeast("Jeffery", "Manticore",0,0,40, "Criminals", 0, 40, 0, 40, 40, 0, 50, 0, 0)};
+    
+    
+        private List<Employee> employees = new List<Employee>() {
+        new Volunteer("Joseph",200,"Volunteer","08/17/2017",20,"Volunteer Inc"),
+        new Manager("2/10/2010", "Volunteer", "Karen", 0020, "Manager", "02/06/2008")};
+
+        public List<Employee> Employees { get => employees; set => employees = value; }
+        public List<MagicalBeast> PetRoster { get => petRoster; set => petRoster = value; }
 
 
-
-        public VirtualPetShelter(List<Employee> employeeRoster, List<VirtualPet> petRoster)
+        public VirtualPetShelter()
         {
-            this.EmployeeRoster = employeeRoster;
-            this.PetRoster = petRoster;
+            //default ctor
         }
 
-        public void AddEmployee()
+
+
+
+
+
+
+        public List<MagicalBeast> GetList()
         {
-            //List<T>.Add(new Manager());
+            return this.PetRoster;
         }
+       
     }
 }

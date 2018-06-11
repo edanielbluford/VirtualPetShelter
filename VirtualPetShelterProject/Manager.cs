@@ -27,5 +27,20 @@ namespace VirtualPetShelterProject
             this.EmployeeType = employeeType;
             this.EmployeeStartDate = employeeStartDate;
         }
+
+       public void Adopt()
+        {
+
+        }
+
+        public override void ManageMischeif()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void OrderFood()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
